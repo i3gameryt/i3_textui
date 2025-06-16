@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hex-container" style="display: none;">
+        <div class="hexagon-stroke">
+            <div class="hexagon">
+                <span id="key"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="hex-ui" style="display: none;">
+        <div id="label"></div>
+    </div>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            fetch(`https://${GetParentResourceName()}/nui_ready`, {
+                method: 'POST'
+            }).catch((e) => {});
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
